@@ -250,11 +250,11 @@
                       </directionalLight>
                       <PointLight id='point' on='TRUE' intensity='0.9000' ambientIntensity='0.0000' color='0.0 0.6 0.0' location='2 10 0.5 '  attenuation='0 0 0' radius='5.0000'> </PointLight>
                       <SpotLight id='spot' on ="TRUE" beamWidth='0.9' color='0 0 1' cutOffAngle='0.78' location='0 0 12' radius='22'></SpotLight>
-                      <Inline nameSpaceName="light" mapDEFToID="true" url="/static/cola_can.x3d"></Inline>
+                      <Inline nameSpaceName="light" mapDEFToID="true" url="./static/cola.x3d"></Inline>
                       <Transform translation="0 -9.0 0" rotation="1 0 0 -1.57">
                           <Shape>
                               <Appearance><Material diffuseColor="0.7 0.7 0.7"></Material></Appearance>
-                              <Plane solid="false" size="5 5"></Plane>
+                              <Plane solid="false" size="1 1"></Plane>
                           </Shape>
                       </Transform>
                   </scene>
