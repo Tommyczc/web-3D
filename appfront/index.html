@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.css" crossorigin="anonymous">
+
+    <!-- X3DOM.css -->
+    <link rel='stylesheet' type='text/css' href='./css/x3dom.css'>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/custom.css" crossorigin="anonymous">
+
+      <!-- Lets have some fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <!-- fancyBox3 -->
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.min.css">
+    
+    <title>Web 3D Applications</title>
+
+  </head>
+  <body id="bodyColor">
+      <!-- The 3D App header -->
+      <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+      
+            <!-- Brand -->
+            <div class="logo">
+              <a class="navbar-brand" href="#">
+                <h1>1oca</h1>
+                <h2>Cola</h2>
+                <h3>brand</h3>
+                <p>Refreshing the world, one story at a time</p>
+              </a>
+            </div>
+
+            <!-- Navbar Menu Icon -->
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- link Menu Icon button to the links class navbar-collapse selector] -->
+            <div class="collapse navbar-collapse">
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="navStyle" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="change style" data-content="press it to change style">Style</a>
+                    </li>
+                  <li class="nav-item">
+                    <a id="navHome" class="nav-link active" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navAbout" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="About Web Assignment" data-content="This is my 3D web page">About</a>
+                  </li>
+              
+                  <!-- Dropdown -->
+                  <li class="nav-item">
+                      <a id="navModels" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="X3D Models" data-content="There are four X3D objects in three models: Coke, Sprite and Pepper">X3d Models</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+                  </li>
+                </ul>
+            </div>
+      </nav>
+
+      <!-- This is the main contents of the page, it has a background image across 1 column, followed by three columns holding cards in a row for the 3 images and associated texts
+      -->
+      <div class="container-fluid">
+
+          <!-- This is the home page contents -->
+          <div id="home" class="main_contents">
+            <!-- A row for the main 3D image theme — could make this a Jubotron with a carousel -->
+            <div class="row">
+              <div class="col-sm-12">
+                  <div id="main_3d_image">
+                      <div id="main_text" class="col-xs-12 col-sm-4">
+                        <div id="title_home"></div>
+                        <div id="subTitle_home"></div>
+                        <div id="description_home"></div>
+                      </div> 
+                    </div>
+              </div>
+            </div>  
+
+            <!-- A row to hold three cards for the Coke, Sprite and Pepper contents -->
+            <div class="row">
+                  <div class="col-sm-4">
+                      <div class="card img-narrow">
+                          <a href="./images/cola_bottle.png" data-fancybox data-caption="My 3D Coke Can Render">
+                            <img class="card-img-top img-fluid img-thumbnail" src="./images/coca_cola.jpg" alt="Coca Cola">
+                          </a>
+                          <div class="card-body">
+                                <div id="title_left" class="card-title drinksText"></div>
+                                <div id="subTitle_left" class="card-subtitle drinksText"></div>
+                                <div id="description_left" class="card-text drinksText"></div>   
+                            <a href="./cola_page/index.html" class="btn btn-primary btn-responsive">Visit Cola Page</a>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-sm-4">
+                      <div class="card">
+                          <a href="./images/sprite_can.png" data-fancybox data-caption="My 3D Sprite Bottle Render" class="img-narrow">
+                            <img class="card-img-top img-fluid img-thumbnail" src="./images/sprite.jpg" alt="Sprite">
+                          </a>
+                          <div class="card-body">
+                            <div id="title_centre" class="card-title drinksText"></div>
+                            <div id="subTitle_centre" class="card-subtitle drinksText"></div>
+                            <div id="description_centre" class="card-text drinksText"></div>   
+                            <a href="./cola_page/index.html" class="btn btn-primary btn-responsive">Visit Sprite Page</a>
+                          </div>
+                          
+                      </div>
+                  </div>
+                  
+                  <div class="col-sm-4">
+                      <div class="card img-narrow">
+                          <a href="./images/fanta_bottle.png" data-fancybox data-caption="My 3D Fanta Render" class="thumbnail">
+                            <img class="card-img-top img-fluid img-thumbnail" src="./images/Fanta_logo.png" alt="Fanta">
+                          </a>
+                          <div class="card-body">
+                            <div id="title_right" class="card-title drinksText"></div>
+                            <div id="subTitle_right" class="card-subtitle drinksText"></div>
+                            <div id="description_right" class="card-text drinksText"></div>   
+                            <a href="./cola_page/index.html" class="btn btn-primary btn-responsive">Visit Fanta Page</a>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+          </div>  <!-- End home page contents-->
+
+          <div id="about" style="display:none;">
+              Insert About Contents
+          </div>  
+
+
+
+
+      
+      <nav id="footerColor" class="navbar navbar-expand-sm footer">
+          <div class="container-fluid">   
+              <div class="navbar-text float-left copyright">
+                  <p><span class="align-baseline">&copy 2022 3D Apps |</span></p>
+              </div>
+              <div class="navbar-text float-right social">
+                  <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                  <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                  <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+                  <a href="#"><i class="fab fa-github-square fa-2x"></i></a>
+              </div>
+          </div>
+      </nav> 
+
+      <!-- My 3D App modals -->
+      <!-- Contact modal -->
+      <!-- The Modal -->
+      <div class="modal fade" id="contactModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">3D Assignment Contact Details</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <p>Cand num: 221865</p>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+          </div>
+      </div>
+
+      <!-- JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="./js/jquery-3.2.1.js" crossorigin="anonymous"></script>
+      <script src="./js/popper.min.js" crossorigin="anonymous"></script>
+      <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <script src="./js/fontawesome-all.min.js"></script>
+      <!-- Custom JavaScript code for your 3d App -->
+      <script src="./js/custom.js" crossorigin="anonymous"></script>
+      <!-- JavaScript to swap for SPA and restyle -->
+      <script src="./js/swap_restyle.js"></script>
+      <!-- Include the x3dom JavaScript -->
+      <script type='text/javascript' src='./js/x3dom.js'></script>
+      <!-- JavaScript and PHP based Gallery generator  -->
+      <script type="text/javascript" src="./js/gallery_generator.js"></script>
+      <!-- JQuery code to get content data from a backend JSON file -->
+      <script src="./js/getJsonData.js"></script>
+      <!-- JavaScript model interactions -->
+      <script src="./js/modelInteractions.js"></script>
+      <!--fancyBox3 => http://fancyapps.com/fancybox/3/ -->
+      <script src="./js/jquery.fancybox.min.js"></script>
+  </body>
+</html>
