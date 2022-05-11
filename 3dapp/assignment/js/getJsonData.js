@@ -25,34 +25,42 @@ $(document).ready(function(){
 		$('#description_right').html('<p>' + jsonObj.pageTextData[3].description + '</p>');			
 	  
 		//Get the coke main text data
-		$('#x3dModelTitle_coke').html('<h2>' + jsonObj.pageTextData[4].x3dModelTitle + '<h2>');
-		$('#x3dCreationMethod_coke').html('<p>' + jsonObj.pageTextData[4].x3dCreationMethod + '<p>');
-		$('#title_coke').html('<h2>' + jsonObj.pageTextData[4].title + '<h2>');
-		$('#subTitle_coke').html('<h3>' + jsonObj.pageTextData[4].subTitle + '</h3>');
-		$('#description_coke').html('<p>' + jsonObj.pageTextData[4].description + '</p>');
+		//$('#x3dModelTitle_coke').html('<h2>' + jsonObj.pageTextData[4].x3dModelTitle + '<h2>');
+		//$('#x3dCreationMethod_coke').html('<p>' + jsonObj.pageTextData[4].x3dCreationMethod + '<p>');
+		//$('#title_coke').html('<h2>' + jsonObj.pageTextData[4].title + '<h2>');
+		//$('#subTitle_coke').html('<h3>' + jsonObj.pageTextData[4].subTitle + '</h3>');
+		//$('#description_coke').html('<p>' + jsonObj.pageTextData[4].description + '</p>');
  
 		//Get the sprite main text data
-		$('#x3dModelTitle_sprite').html('<h2>' + jsonObj.pageTextData[5].x3dModelTitle + '<h2>');
-		$('#x3dCreationMethod_sprite').html('<p>' + jsonObj.pageTextData[5].x3dCreationMethod + '<p>');
-		$('#title_sprite').html('<h2>' + jsonObj.pageTextData[5].title + '<h2>');
-		$('#subTitle_sprite').html('<h3>' + jsonObj.pageTextData[5].subTitle + '</h3>');
-		$('#description_sprite').html('<p>' + jsonObj.pageTextData[5].description + '</p>');		
+		//$('#x3dModelTitle_sprite').html('<h2>' + jsonObj.pageTextData[5].x3dModelTitle + '<h2>');
+		//$('#x3dCreationMethod_sprite').html('<p>' + jsonObj.pageTextData[5].x3dCreationMethod + '<p>');
+		//$('#title_sprite').html('<h2>' + jsonObj.pageTextData[5].title + '<h2>');
+		//$('#subTitle_sprite').html('<h3>' + jsonObj.pageTextData[5].subTitle + '</h3>');
+		//$('#description_sprite').html('<p>' + jsonObj.pageTextData[5].description + '</p>');
 
 		//Get the pepper main text data
-		$('#x3dModelTitle_pepper').html('<h2>' + jsonObj.pageTextData[6].x3dModelTitle + '<h2>');
-		$('#x3dCreationMethod_pepper').html('<p>' + jsonObj.pageTextData[6].x3dCreationMethod + '<p>');
- 		$('#title_pepper').html('<h2>' + jsonObj.pageTextData[6].title + '<h2>');
-		$('#subTitle_pepper').html('<h3>' + jsonObj.pageTextData[6].subTitle + '</h3>');
-		$('#description_pepper').html('<p>' + jsonObj.pageTextData[6].description + '</p>');
+		//$('#x3dModelTitle_pepper').html('<h2>' + jsonObj.pageTextData[6].x3dModelTitle + '<h2>');
+		//$('#x3dCreationMethod_pepper').html('<p>' + jsonObj.pageTextData[6].x3dCreationMethod + '<p>');
+ 		//$('#title_pepper').html('<h2>' + jsonObj.pageTextData[6].title + '<h2>');
+		//$('#subTitle_pepper').html('<h3>' + jsonObj.pageTextData[6].subTitle + '</h3>');
+		//$('#description_pepper').html('<p>' + jsonObj.pageTextData[6].description + '</p>');
 		
 		//Get the gallery contents data
-		$('.title_gallery').html('<h2>' + jsonObj.pageTextData[7].galleryTitle + '<h2>');
-		$('.description_gallery').html('<p>' + jsonObj.pageTextData[7].galleryDescription + '</p>');
+		//$('.title_gallery').html('<h2>' + jsonObj.pageTextData[7].galleryTitle + '<h2>');
+		//$('.description_gallery').html('<p>' + jsonObj.pageTextData[7].galleryDescription + '</p>');
 
 		//Get camera contnets data
-		$('.x3dCameraTitle').html('<h2>' + jsonObj.pageTextData[8].CameraTitle + '<h2>');
-		$('.x3dCameraSubtitle').html('<p>' + jsonObj.pageTextData[8].CameraSubtitle + '<p');
+		//$('.x3dCameraTitle').html('<h2>' + jsonObj.pageTextData[8].CameraTitle + '<h2>');
+		//$('.x3dCameraSubtitle').html('<p>' + jsonObj.pageTextData[8].CameraSubtitle + '<p');
 
+        //get about content
+        $('#about_Title').html('<h2>' + jsonObj.pageTextData[9].title + '</h2>');
+        $('#about_Content').html('<p>' + jsonObj.pageTextData[9].content + '</p>');
+
+        console.log(jsonObj.pageTextData[9].title);
+
+        //$('.about1Title').html('<h2>' + jsonObj.pageTextData[10].about1Title + '<h2>');
+        //$('.about1Content').html('<p>' + jsonObj.pageTextData[10].about1Content + '</p>');
 	 });
 });
 

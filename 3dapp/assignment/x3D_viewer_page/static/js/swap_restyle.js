@@ -58,7 +58,7 @@ function cokeDescription() {
 
 function redirectToCola(){
 
-location.href='/~zc243/appfront/cola_page/';
+location.href='/~zc243/3dapp/assignment/cola_page/';
 }
 
 function spriteDescription() {

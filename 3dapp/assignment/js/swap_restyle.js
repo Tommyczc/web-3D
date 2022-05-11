@@ -32,7 +32,6 @@ function selectPage() {
 		$('#home').hide();
 		$('#about').show();
 		$('#models').hide();
-
 	});
 
 	$('#navModels').click(function(){

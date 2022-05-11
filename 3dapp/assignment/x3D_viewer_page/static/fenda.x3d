@@ -10,7 +10,7 @@
 <Scene>
 	<Shape>
 		<Appearance>
-			<ImageTexture url="/images/111.jpg"></ImageTexture>
+			<ImageTexture url="./images/111.jpg"></ImageTexture>
 			</Appearance>
 		<IndexedFaceSet
 			solid="false"

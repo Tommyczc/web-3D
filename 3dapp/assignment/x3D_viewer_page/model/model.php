@@ -9,24 +9,15 @@ class Model{
     public function __construct()
     {
         $this->dbhandle = new PDO('sqlite:mydb.sqlite3');
-
-        /*	$dsn 		= 'mysql:dbname=mydb;host=localhost';
-		$user 		= 'root';
-		$password 	= '';
-
-		$db = new PDO($dsn, $user, $password);
-
-		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
     }
 
     public function createTable(){
         try{
 
-            /* Create a prepared statement */
             $stmt = $this->dbhandle -> prepare("CREATE TABLE IF NOT EXISTS mytable (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT);");
 
             /* execute the query */
-            if ( $stmt -> execute() )
+            if ($stmt -> execute())
             {
                 return array(
                     'model_1'=>"Table is created"
@@ -106,7 +97,7 @@ class Model{
             $stmt -> bindParam(':name', $name, PDO::PARAM_STR);
 
             /* execute the query */
-            if( $stmt -> execute() ){
+            if($stmt -> execute()){
                 return array(
                     'model_1'=>"data is update"
                 );
@@ -118,7 +109,6 @@ class Model{
             echo $e->getMessage();
         }
     }
-
 
     public function model3D_info()
     {

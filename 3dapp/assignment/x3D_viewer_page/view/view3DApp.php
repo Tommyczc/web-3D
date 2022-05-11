@@ -71,18 +71,18 @@
      <div class="card">
      <div class="card-body">
 	 <div class="bs-example" id="btnDiv">
-		<button type="button" class="btn btn-primary" val="1">Fanta</button>
-		<button type="button" class="btn btn-default" val="2">Cola</button>
-		<button type="button" class="btn btn-default" val="3">Sprite</button>
-         <button type="button" class="btn btn-default" val="4">Cola600</button>
+		<button type="button" class="btn btn-primary" val="1">Num1</button>
+		<button type="button" class="btn btn-default" val="2">Num2</button>
+		<button type="button" class="btn btn-default" val="3">Num3</button>
+         <button type="button" class="btn btn-default" val="4">Num4</button>
 	 </div>
 	 </div>
 	 </div>
 
 
-	<div class="row" >
+	<div class="row">
 	  <div class="col-md-4" id="pro">
-	    <div id="Fanta" class="x3d">
+	    <div id="Num1" class="x3d">
             <X3D profile="Interchange" version="3.2"
                  xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
                  xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.2.xsd" height='500px'>
@@ -136,7 +136,7 @@
             </div>
         </div>
 
-          <div  id="Cola" class="x3d">
+          <div  id="Num2" class="x3d">
               <X3D profile="Interchange" version="3.2"
                    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
                    xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.2.xsd" height='500px'>
@@ -188,7 +188,7 @@
                   <label>headlight</label>
               </div>
           </div>
-          <div id="Sprite" class="x3d">
+          <div id="Num3" class="x3d">
               <X3D profile="Interchange" version="3.2"
                    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
                    xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.2.xsd" height='500px'>
@@ -208,7 +208,7 @@
                       <SpotLight id='spot' on ="TRUE" beamWidth='0.9' color='0 0 1' cutOffAngle='0.78' location='0 0 12' radius='22'></SpotLight>
                       <Shape>
                           <Appearance>
-                              <ImageTexture url="./static/images/444.jpg"><ImageTexture />
+                              <ImageTexture url="./static/images/444.jpg"><ImageTexture/>
                           </Appearance>
                           <IndexedFaceSet
                           			solid="false"
@@ -240,12 +240,13 @@
               </div>
           </div>
 
-          <div id="Cola600" class="x3d">
+
+          <div id="Num4" class="x3d">
               <x3d height='500px'>
                   <scene>
                       <navigationInfo id="head" headlight='true' type='"EXAMINE"'></navigationInfo>
-                      <background  skyColor="0 0 0"></background>
-                      <Viewpoint position="-3.25762 23.85703 48.74621" orientation="-0.99104 -0.13344 -0.00551 0.46917"></Viewpoint>
+                      <background  skyColor="0 140 255"></background>
+                      <Viewpoint position="100 100 2150" orientation="0 0 0 0"></Viewpoint>
                       <directionalLight id="directional" direction='0 -1 0' on ="TRUE" intensity='2.0' shadowIntensity='0.0'>
                       </directionalLight>
                       <PointLight id='point' on='TRUE' intensity='0.9000' ambientIntensity='0.0000' color='0.0 0.6 0.0' location='2 10 0.5 '  attenuation='0 0 0' radius='5.0000'> </PointLight>
@@ -254,7 +255,6 @@
                       <Transform translation="0 -9.0 0" rotation="1 0 0 -1.57">
                           <Shape>
                               <Appearance><Material diffuseColor="0.7 0.7 0.7"></Material></Appearance>
-                              <Plane solid="false" size="1 1"></Plane>
                           </Shape>
                       </Transform>
                   </scene>
@@ -275,6 +275,7 @@
 
 
         <div class="col-md-4">
+        <h3>Camera View Point</h3>
             <div id="cam">
                 <a class="btn btn-default" href="#" role="button" id="front">front</a>
                 <a class="btn btn-default" href="#" role="button" id="bottom">bottom</a>
@@ -283,8 +284,14 @@
             </div>
 
             <br/>
+            <br/>
+
+            <div id="descrition" class="model_Description"><h3>Model Description</h3></div>
             <textarea class="form-control" rows="3" id="textV"></textarea>
             <input class="btn btn-default" type="submit" value="Submit" id="submit">
+
+<br><br>
+            <div id="descrition" class="Photo"><h3>Photo Gallary</h3></div>
         </div>
 	</div>
 
@@ -294,9 +301,9 @@
                       <div class="col-sm-4">
                           <div class="card img-narrow">
                               <div class="card-body">
-                                <div id="title_left" class="card-title drinksText"></div>
-                                <div id="subTitle_left" class="card-subtitle drinksText"></div>
-                                <div id="description_left" class="card-text drinksText"></div>
+                                <div id="title_coke" class="card-title drinksText"></div>
+                                <div id="subTitle_coke" class="card-subtitle drinksText"></div>
+                                <div id="description_coke" class="card-text drinksText"></div>
                                 <a href="javascript: redirectToCola();" class="btn btn-primary btn-responsive">Visit Cola Page</a>
                               </div>
                           </div>
@@ -306,9 +313,9 @@
                           <div class="card">
 
                               <div class="card-body">
-                                <div id="title_centre" class="card-title drinksText"></div>
-                                <div id="subTitle_centre" class="card-subtitle drinksText"></div>
-                                <div id="description_centre" class="card-text drinksText"></div>
+                                <div id="title_sprite" class="card-title drinksText"></div>
+                                <div id="subTitle_sprite" class="card-subtitle drinksText"></div>
+                                <div id="description_sprite" class="card-text drinksText"></div>
                                 <a href="javascript: redirectToCola();" class="btn btn-primary btn-responsive">Visit Sprite Page</a>
                               </div>
 
@@ -318,20 +325,20 @@
                       <div class="col-sm-4">
                           <div class="card img-narrow">
                               <div class="card-body">
-                                <div id="title_right" class="card-title drinksText"></div>
-                                <div id="subTitle_right" class="card-subtitle drinksText"></div>
-                                <div id="description_right" class="card-text drinksText"></div>
+                                <div id="title_fanta" class="card-title drinksText"></div>
+                                <div id="subTitle_fanta" class="card-subtitle drinksText"></div>
+                                <div id="description_fanta" class="card-text drinksText"></div>
                                 <a href="javascript: redirectToCola(); " class="btn btn-primary btn-responsive">Visit Fanta Page</a>
                               </div>
                           </div>
                       </div>
                 </div>
-              </div>  <!-- End home page contents-->
+              </div>
 
     <nav id="footerColor" class="navbar navbar-expand-sm footer">
               <div class="container-fluid">
                   <div class="navbar-text float-left copyright">
-                      <p><span class="align-baseline">&copy 2022 3D Apps |</span></p>
+                      <p><span class="align-baseline">&copy 2022 3D App</span></p>
                   </div>
                   <div class="navbar-text float-right social">
                       <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>

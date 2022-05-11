@@ -2,11 +2,11 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <Scene DEF='scene'>
-    <Viewpoint DEF='Camera001' description='Camera001' orientation='-0.006161 -0.9995 0.0323 -2.578' position='4040 -313 -7885' fieldOfView='0.6024'/>
+    <Viewpoint DEF='Camera001' description='Camera001' orientation='-0.00544 -0.9995 0.03089 -2.598' position='4040 -313 -7885' fieldOfView='0.6024'/>
     <NavigationInfo DEF='NavInfo001' headlight='false' type='"WALK"'/>
-    <SpotLight DEF='Spot001' beamWidth='0.7505' cutOffAngle='0.7854' direction='0.4579 -0.6727 0.5812' location='-1339 2156 -3159' radius='10460'/>
+    <SpotLight DEF='Spot001' beamWidth='0.7505' cutOffAngle='0.7854' direction='0.3199 -0.4813 0.8161' location='-1339 2156 -3159' radius='11000'/>
     <TimeSensor DEF='Spot001-TIMER' cycleInterval='3.333' loop='true'/>
-    <Transform DEF='Line001' rotation='0.5774 -0.5774 0.5774 -4.189' scale='0.9718 0.9718 0.9718' translation='-243.9 -33.39 -503'>
+    <Transform DEF='Line001' rotation='0.5774 -0.5774 0.5774 -4.189' scale='0.9718 0.9718 0.9718' translation='0 -33.39 182.9'>
       <Shape>
         <Appearance>
           <Material ambientIntensity='1' diffuseColor='0.588 0.588 0.588' shininess='0.145'/>
