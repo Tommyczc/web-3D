@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 	 //AJAX service request to get the main text data from the json data store
-	 $.getJSON('./data.json', function(jsonObj) {
+	 $.getJSON('x3D_viewer_page/index.php?queryJson', function(jsonObj) {
 		console.log(jsonObj);
 		//Get the home page main text data
 		$('#title_home').html('<h2>' + jsonObj.pageTextData[0].title + '<h2>');

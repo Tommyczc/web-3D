@@ -53,5 +53,16 @@ class Controller{
         }
 
     }
+	
+	function queryJson(){
+        $id = 1;
+        $data = $this->model->queryJson($id);
+        echo $data["json"];
+    }
+
+    function queryPicPath(){
+        $data = $this->model->queryPicPath();
+        echo json_encode($data);
+    }
 }
 ?>

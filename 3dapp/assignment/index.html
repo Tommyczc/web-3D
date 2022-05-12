@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:href="http://www.w3.org/1999/xhtml">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -83,8 +83,8 @@
             <div class="row">
                   <div class="col-sm-4">
                       <div class="card img-narrow">
-                          <a href="./images/cola_bottle.png" data-fancybox data-caption="My 3D Coke Can Render">
-                            <img class="card-img-top img-fluid img-thumbnail" src="./images/coca_cola.jpg" alt="Coca Cola">
+                          <a href="./x3D_viewer_page/static/images/homepage_images/cola_bottle.png" data-fancybox data-caption="My 3D Coke Can Render">
+                            <img class="card-img-top img-fluid img-thumbnail" src="./x3D_viewer_page/static/images/homepage_images/coca_cola.jpg" alt="Coca Cola">
                           </a>
                           <div class="card-body">
                                 <div id="title_left" class="card-title drinksText"></div>
@@ -97,8 +97,8 @@
                   
                   <div class="col-sm-4">
                       <div class="card">
-                          <a href="./images/sprite_can.png" data-fancybox data-caption="My 3D Sprite Bottle Render" class="img-narrow">
-                            <img class="card-img-top img-fluid img-thumbnail" src="./images/sprite.jpg" alt="Sprite">
+                          <a href="./x3D_viewer_page/static/images/homepage_images/sprite_can.png" data-fancybox data-caption="My 3D Sprite Bottle Render" class="img-narrow">
+                            <img class="card-img-top img-fluid img-thumbnail" src="./x3D_viewer_page/static/images/homepage_images/sprite.jpg" alt="Sprite">
                           </a>
                           <div class="card-body">
                             <div id="title_centre" class="card-title drinksText"></div>
@@ -112,8 +112,8 @@
                   
                   <div class="col-sm-4">
                       <div class="card img-narrow">
-                          <a href="./images/fanta_bottle.png" data-fancybox data-caption="My 3D Fanta Render" class="thumbnail">
-                            <img class="card-img-top img-fluid img-thumbnail" src="./images/Fanta_logo.png" alt="Fanta">
+                          <a href="./x3D_viewer_page/static/images/homepage_images/fanta_bottle.png" data-fancybox data-caption="My 3D Fanta Render" class="thumbnail">
+                            <img class="card-img-top img-fluid img-thumbnail" src="./x3D_viewer_page/static/images/homepage_images/Fanta_logo.png" alt="Fanta">
                           </a>
                           <div class="card-body">
                             <div id="title_right" class="card-title drinksText"></div>
@@ -128,17 +128,27 @@
 
           <div id="about" style="display:none;">
               About Contents</br>
-              <div id="about_Title" class="about-title"><h1>vfgsdfrgerdgerg</h1></div>
-              <div id="about_Content" class="about-content"></div>
-              <div id="statement_Title" class="statement-title"></div>
-              <div id="statement_Content" class="statement-content"></div>
+              <p>
+                  <h2>The URL of sourcecode in Github</h2><a href="https://github.com/Tommyczc/web-3D.git"> click here</a>
+                  <br><br>
+              <h2>About the homepage</h2> This page change main text part as a Youtube video, and when the user click"Visit cola page", it would redirect the Coca cola page that I made.
+                  <br><br>
+              <h2>About the Coca cola page</h2> the page made by BootstrapVue framework, as I have learned this before, and there are no Sprite and Fanta page due to the heavy workload.
+                  The source code URL: <a href="https://github.com/Tommyczc/web-3D/tree/main/ColaPage_sourceCode/demo">click here</a>
+                  <br><br>
+              <h2>About the MVC framework</h2> in this project, it is a complete MVC framework, the description of 3d model is stored in a Json file, the Json file is stored in the Sqlite database, the links of the photo in the gallery are also stored in the database.
+                  <br><br>
+                  <h2>About the X3d model</h2> Comparing with the cola can that we done in the lab, I try to use blender to export the x3d model, but however, it seems that the map cannot be loaded, therefore I edit the the code of the x3d file manually, and now the map can be showed although it is not perfact.
+                  <br><br>
+              <h2>Statement of Originality</h2>These web pages are submitted as part requirement for the degree of [insert your degree title] at the University of Sussex.  They are the product of my own labour except where indicated in the web page content. These web pages or contents may be freely copied and distributed provided the source is acknowledged
+              </p>
           </div>  
 
 
       <nav id="footerColor" class="navbar navbar-expand-sm footer">
           <div class="container-fluid">   
               <div class="navbar-text float-left copyright">
-                  <p><span class="align-baseline">&copy 2022 3D Apps |</span></p>
+                  <p><span class="align-baseline">&copy 2022 3D Apps</span></p>
               </div>
               <div class="navbar-text float-right social">
                   <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>

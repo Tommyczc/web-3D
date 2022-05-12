@@ -94,8 +94,9 @@
                     <Viewpoint id="right" position="196.23557 34.54979 17.26021" orientation="0.35265 0.77451 0.52513
                     1.83548"
                                zNear="94.68245" zFar="337.67430" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
+
                     <navigationInfo id="head" headlight='true' type='"EXAMINE"'></navigationInfo>
-                    <background  skyColor="0 0 0"></background>
+                    <background  skyColor="0 140 255"></background>
 <!--                    <Viewpoint position="-3.25762 23.85703 48.74621" orientation="-0.99104 -0.13344 -0.00551 0.46917"></Viewpoint>-->
                     <directionalLight id="directional" direction='0 -1 0' on ="TRUE" intensity='2.0' shadowIntensity='0.0'>
                     </directionalLight>
@@ -143,7 +144,7 @@
                   <Scene>
 
                       <navigationInfo id="head" headlight='true' type='"EXAMINE"'></navigationInfo>
-                      <background  skyColor="0 0 0"></background>
+                      <background  skyColor="0 140 255"></background>
                       <Viewpoint id="front" position="0 0 200" orientation="0 0 0 0"></Viewpoint>
                       <Viewpoint id="bottom"  position="50.66324 -193.32630 -7.62751" orientation="0.67399 0.61546 -0.40860 1.81956"zNear="94.68245" zFar="337.67430" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
                       <Viewpoint id="left" position="-155.72839 -29.63324 -121.94483" orientation="0.69293 -0.66700 -0.27378 2.40411"
@@ -194,7 +195,7 @@
                    xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.2.xsd" height='500px'>
                   <Scene>
                       <navigationInfo id="head" headlight='true' type='"EXAMINE"'></navigationInfo>
-                      <background  skyColor="0 0 0"></background>
+                      <background  skyColor="0 140 255"></background>
                       <Viewpoint id="front" position="0 0 200" orientation="0 0 0 0"></Viewpoint>
                       <Viewpoint id="bottom"  position="50.66324 -193.32630 -7.62751" orientation="0.67399 0.61546 -0.40860 1.81956"zNear="94.68245" zFar="337.67430" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
                       <Viewpoint id="left" position="-155.72839 -29.63324 -121.94483" orientation="0.69293 -0.66700 -0.27378 2.40411"
@@ -246,7 +247,14 @@
                   <scene>
                       <navigationInfo id="head" headlight='true' type='"EXAMINE"'></navigationInfo>
                       <background  skyColor="0 140 255"></background>
-                      <Viewpoint position="100 100 2150" orientation="0 0 0 0"></Viewpoint>
+                      <Viewpoint id="front" position="100 100 2150" orientation="0 0 0 0"></Viewpoint>
+                      <Viewpoint id="bottom" position="27.85767 -2067.76254 605.04713" orientation="0.99462 -0.08001
+                      0.06581 1.34156"
+	zNear="1227.28202" zFar="3280.94504" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
+                      <Viewpoint id="left" position="1062.41405 300.36481 -1850.28575" orientation="0.71448 -0.68601 0.13753 3.67060"
+	zNear="1246.17945" zFar="3309.29118" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
+                      <Viewpoint id="right" position="1408.49031 666.37296 1488.15394" orientation="0.22431 0.47569 0.85053 1.76262"
+	zNear="1249.10194" zFar="3313.67492" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
                       <directionalLight id="directional" direction='0 -1 0' on ="TRUE" intensity='2.0' shadowIntensity='0.0'>
                       </directionalLight>
                       <PointLight id='point' on='TRUE' intensity='0.9000' ambientIntensity='0.0000' color='0.0 0.6 0.0' location='2 10 0.5 '  attenuation='0 0 0' radius='5.0000'> </PointLight>
@@ -292,6 +300,22 @@
 
 <br><br>
             <div id="descrition" class="Photo"><h3>Photo Gallary</h3></div>
+<!--图片固定路径加载-->
+            <table id="photoGallary">
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+
         </div>
 	</div>
 
@@ -318,7 +342,6 @@
                                 <div id="description_sprite" class="card-text drinksText"></div>
                                 <a href="javascript: redirectToCola();" class="btn btn-primary btn-responsive">Visit Sprite Page</a>
                               </div>
-
                           </div>
                       </div>
 
@@ -375,7 +398,7 @@
 	<script type="text/javascript">
 		$(function(){
 			$("#pro .x3d").hide();
-            $("#pro #one").show();
+            $("#pro #Num1").show();
 			$('#btnDiv button').on('click',function(){
 				$('#btnDiv button').removeClass('btn-primary').addClass('btn-default');
 				$(this).addClass('btn-primary');
@@ -411,7 +434,7 @@
             })
 
             $('#cam a').click(function(){
-                debugger
+                //debugger
                 $("#pro .x3d:visible").find('#'+$(this).attr('id')).attr('set_bind','true')
             })
 		})
@@ -430,6 +453,15 @@
             {"id":1},
             function(data,status){
                 $("#textV").val(data)
+            }
+        );
+
+        $.post("index.php?queryPicPath",
+            function(data,status){
+                data = JSON.parse(data);
+                $('#photoGallary td').each(function(i){
+                    $(this).append('<img src="'+data[i].path+'" border=0 width="150px" height="150px">');
+                })
             }
         );
 

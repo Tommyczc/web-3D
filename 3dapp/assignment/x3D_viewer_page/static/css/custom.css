@@ -88,6 +88,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
 }
 
+.modelText > h2{
+font-size: 15px;
+color: rgb(255, 255, 255);
+}
+
 .card {
     border: 1px solid rgba(0,0,0,.125);
     /* border-radius: .25rem;*/
@@ -304,15 +309,6 @@ There is plenty more styling to do than indicated here, in mobile it still defau
     height: auto;
 }
 
-.gallery .img-thumbnail {
-    background-color: rgba(255, 255, 255, 0.0);
-    padding: 0.25rem;
-    margin: 2px;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    max-width: 43%;
-    height: auto;
-}
 
 .nav-tabs .nav-link.active, .nav-item.show {
     color:  #760003; /* Font color for active font */

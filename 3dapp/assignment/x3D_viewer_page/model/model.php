@@ -109,6 +109,67 @@ class Model{
             echo $e->getMessage();
         }
     }
+	
+    public function queryJson($id){
+        try{
+
+            /* Create a prepared statement */
+            $stmt = $this->dbhandle -> prepare("SELECT * from t_json where id = :id");
+
+            /* bind param */
+            $stmt -> bindParam(':id', $id, PDO::PARAM_INT);
+
+            /* execute the query */
+            $stmt -> execute();
+
+            /* fetch all results */
+            $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach($res as $row){
+                extract($row);
+//                echo $id." | ".$name."<br>";
+                return array(
+                    'json'=>$row["json"]
+                );
+            }
+
+            /* close connection */
+            $db = null;
+        }
+        catch (PDOExecption $e){
+            echo $e->getMessage();
+        }
+    }
+
+    public function queryPicPath(){
+        try{
+
+            /* Create a prepared statement */
+            $stmt = $this->dbhandle -> prepare("SELECT * from t_pic_path");
+
+            /* execute the query */
+            $stmt -> execute();
+
+            /* fetch all results */
+            $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $res;
+
+//            foreach($res as $row){
+//                extract($row);
+////                echo $id." | ".$name."<br>";
+//                return array(
+//                    'path'=>$row["path"]
+//                );
+//            }
+
+            /* close connection */
+            $db = null;
+        }
+        catch (PDOExecption $e){
+            echo $e->getMessage();
+        }
+    }
 
     public function model3D_info()
     {

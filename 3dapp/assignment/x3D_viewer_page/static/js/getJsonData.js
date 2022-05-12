@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 	 //AJAX service request to get the main text data from the json data store
-	 $.getJSON('/~zc243/3dapp/assignment/data.json', function(jsonObj) {
+	 $.getJSON('index.php?queryJson', function(jsonObj) {
 	  
 		//Get the coke main text data
 		$('#x3dModelTitle_coke').html('<h2>' + jsonObj.pageTextData[4].x3dModelTitle + '<h2>');
